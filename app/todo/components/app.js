@@ -1,11 +1,13 @@
 import {Todo} from '../models/todo_model';
 import {TodoService} from '../services/todo_service';
+import {inject} from 'aurelia-framework';
 
+@inject(Todo, TodoService)
 export class App {
-    constructor() {
-        this.todo = new Todo();
+    constructor(todo, service) {
+        this.todo = todo;
         this.todoList = [];
-        this.todoService = new TodoService();
+        this.todoService = service;
     }
 
     add(todo) {
