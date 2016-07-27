@@ -1,3 +1,5 @@
+Ridiculously simple TodoApp using Aurelia.
+
 ```shell
 $ npm i
 ```
