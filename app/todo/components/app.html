@@ -1,0 +1,35 @@
+<template>
+    <div class="todo_container">
+        <p class="todo_title">aurelia2do</p>
+
+        <div id="todo_form_container">
+            <form submit.delegate="add(todo)">
+                <input type="text"
+                       value.bind="todo.message"
+                       placeholder="What do you have to do?"
+                       autofocus
+                       class="todo_input" />
+
+                <button type="submit"
+                        disabled.bind="!todo.message"
+                        class="todo_button">+</button>
+            </form>
+
+            <div id="todo_list_container">
+                <br>
+
+                <h3 class="nothing_to_do"
+                    if.bind="!todoList.length">Nothing to do. Go play outside :D</h3>
+
+                <div class="todo_item" repeat.for="t of todoList">
+
+                    <span>${t.message}</span>
+
+                    <button type="button"
+                            click.delegate="remove(t._id)"
+                            class="todo_exclude_item">x</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

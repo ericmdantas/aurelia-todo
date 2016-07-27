@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "aliv --q --p 1234 --pi app",
+    "start": "aliv --q --p 1234",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
