@@ -3,7 +3,7 @@ import {TodoService} from '../services/todo_service';
 import {inject} from 'aurelia-framework';
 
 @inject(Todo, TodoService)
-export class App {
+export class TodoCmp {
     constructor(todo, service) {
         this.todo = todo;
         this.todoList = [];

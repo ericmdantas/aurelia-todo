@@ -1,5 +1,5 @@
 System.config({
-  baseURL: "/app/todo/components",
+  baseURL: "/app",
   defaultJSExtensions: true,
   transpiler: "babel",
   babelOptions: {
@@ -11,7 +11,6 @@ System.config({
     ]
   },
   paths: {
-    "*": "app",
     "github:*": "../jspm_packages/github/*",
     "npm:*": "../jspm_packages/npm/*"
   },
